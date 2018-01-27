@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 import com.bignerdranch.android.geoquiz.Question;
 
-
 public class QuizActivity extends AppCompatActivity {
 
     private Button mTrueButton;
@@ -74,7 +73,7 @@ public class QuizActivity extends AppCompatActivity {
         mLeftButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
+                mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
                 updateQuestion();
             }
         });
